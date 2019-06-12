@@ -21,7 +21,8 @@ class CustomRecovery:
                              command=self.write_slogan)
         self.slogan.pack(side=LEFT)
     def write_slogan(self):
-        print("Please type the number that matches the version of TWRP Custom Recovery for installation")
+        print("Please ensure you authorise ADB before launching processes here. A button to complete this task is avalible on the main menu.)
+        print("Please type the number that matches the version of TWRP Custom Recovery for installation \n")
         print("1 - TWRP 2.8.7 Testing Edition")
         print("2 - TWRP 2.8.7 R2")
         print("3 - TWRP 2.8.7 R3")
@@ -99,7 +100,7 @@ class LollipopDowngrade:
         self.slogan.pack(side=LEFT)
     def write_slogan(self):
         import os
-        print("please move all of the Lollipop firmware files into the moto toolkit directory (the same folder containing toolkit.py)")
+        print("Please move all of the Lollipop firmware files into the moto toolkit directory (the same folder containing toolkit.py)")
         print("")
         ask2 = input("Please make sure usb debugging is turned on in developer settings,\n then type 'done' and press enter to continue \n")
         if ask2 == ("done"):
@@ -114,11 +115,11 @@ class LollipopDowngrade:
                     print("Partition table has been SKIPPED")
                     print("Bootloader has been SKIPPED")
                     os.system("fastboot.exe flash logo logo.bin")
-                    print("boot logo has been flashed")
+                    print("boot logo image has been flashed")
                     os.system("fastboot.exe flash boot boot.img")
                     print("boot.img has been flashed")
                     os.system("fastboot.exe flash recovery recovery.img")
-                    print("Stock marshmallow recovery has now been flashed")
+                    print("Stock Marshmalow recovery image has now been flashed (No TWRP!)")
                     os.system("fastboot.exe flash system system.img_sparsechunk.0")
                     print("System part 1 has been flashed")
                     os.system("fastboot.exe flash system system.img_sparsechunk.1")
@@ -147,7 +148,7 @@ class LollipopDowngrade:
                     print("userdata partition formatted")
                     os.system("fastboot.exe reboot")
                     print("flash finished")
-                    print("Enjoy Lollipop again!")
+                    print("Enjoy Lollipop!")
 
 class LollipopInstall:
     def __init__(self, master):
@@ -201,19 +202,19 @@ class LollipopInstall:
                     print("System part 7 has been flashed")
                     print("system partitions successfully flashed")
                     os.system("fastboot.exe flash modem NON-HLOS.bin")
-                    print("Flashed Mobile Data Connection Chip Data")
+                    print("Flashed HLOS Chip Data")
                     os.system("fastboot.exe erase modemst1")
                     os.system("fastboot.exe erase modemst2")
                     print("Old data erased")
                     os.system("fastboot.exe flash fsg fsg.mbn")
                     print("Flashed FSG Succesfully")
                     os.system("fastboot.exe erase cache")
-                    print("cache erased")
+                    print("Cache data erased")
                     os.system("fastboot.exe erase userdata")
                     print("userdata partition formatted")
                     os.system("fastboot.exe reboot")
-                    print("flash finished")
-                    print("enjoy Lollipop!")
+                    print("Flash has completed")
+                    print("Enjoy Lollipop!")
 
 class MarshmallowInstall:
     def __init__(self, master):
@@ -275,7 +276,7 @@ class MarshmallowInstall:
                     print("userdata partition formatted")
                     os.system("fastboot.exe reboot")
                     print("flash finished")
-                    print("enjoy Marshmallow!")
+                    print("Enjoy Marshmallow!")
 
 
 class Userdata_erase:
@@ -288,10 +289,10 @@ class Userdata_erase:
         self.slogan.pack(side=LEFT)
     def write_slogan(self):
         import os
-        confirm3 = input("Please turn on usb debugging in developer settings, then type 'done' here\n")
+        confirm3 = input("Please turn on usb debugging in developer settings (tap your build number in the about serction 5 times to enable dev mode), then type 'done' here\n")
         if confirm3 == ("done"):
             os.system("adb.exe reboot-bootloader")
-            bootloaderwait5 = input("is your device in bootloader mode? ")
+            bootloaderwait5 = input("is your device in bootloader mode? please type 'yes' and press enter to continue. \n")
             if bootloaderwait5 == ("yes"):
                 os.system("fastboot.exe erase userdata")
                 os.system("fastbot.exe reboot")
@@ -308,6 +309,7 @@ class Driver:
         self.slogan.pack(side=LEFT)
     def write_slogan(self):
         import os
+        print ("Please make sure the Motorola driver is placed in the Toolkit folder with the name 'Driver.exe' before using this tool.")
         os.system("Driver.exe")
 
 
