@@ -32,33 +32,38 @@ class CustomRecovery:
         ask = input()
         if ask == ("1"):
             import os
-            bootloaderwaittwrp = input("please press enter when your device is in bootloader mode")
+            os.system("adb.exe reboot-bootloader")
+            bootloaderwaittwrp = input("Please press enter when your device is in bootloader mode")
             os.system("fastboot flash recovery TWRP2.8.7TESTING.img")
             print("Flash Done")
             os.system("fastboot reboot")
         elif ask == ("2"):
             import os
-            bootloaderwaittwrp = input("please press enter when your device is in bootloader mode")
+            os.system("adb.exe reboot-bootloader")
+            bootloaderwaittwrp = input("Please press enter when your device is in bootloader mode")
             os.system("fastboot flash recovery TWRP2.8.7R2.img")
             print ("Flash Done")
             os.system("fastboot reboot")
 
         elif ask == ("3"):
             import os
-            bootloaderwaittwrp = input("please press enter when your device is in bootloader mode")
+            os.system("adb.exe reboot-bootloader")
+            bootloaderwaittwrp = input("Please press enter when your device is in bootloader mode")
             os.system("fastboot flash recovery TWRP2.8.7R3.img")
             print ("Flash Done")
             os.system("fastboot reboot")
 
         elif ask == ("4"):
             import os
-            bootloaderwaittwrp = input("please press enter when your device is in bootloader mode")
+            os.system("adb.exe reboot-bootloader")
+            bootloaderwaittwrp = input("Please press enter when your device is in bootloader mode")
             os.system("fastboot flash recovery TWRP2.8.7R4.img")
             print ("Flash Done")
             os.system("fastboot reboot")
         
         elif ask == ("5"):
             import os
+            os.system("adb.exe reboot-bootloader")
             bootloaderwaittwrp = input("please press enter when your device is in bootloader mode")
             os.system("fastboot flash recovery TWRP2.8.7R5.img")
             print ("Flash Done")
@@ -66,14 +71,16 @@ class CustomRecovery:
 
         elif ask == ("6"):
             import os
-            bootloaderwaittwrp = input("please press enter when your device is in bootloader mode")
+            os.system("adb.exe reboot-bootloader")
+            bootloaderwaittwrp = input("Please press enter when your device is in bootloader mode")
             os.system("fastboot flash recovery TWRP2.8.7R7.img")
             print ("Flash Done")
             os.system("fastboot reboot")
 
         elif ask == ("7"):
             import os
-            bootloaderwaittwrp = input("please press enter when your device is in bootloader mode")
+            os.system("adb.exe reboot-bootloader")
+            bootloaderwaittwrp = input("Please press enter when your device is in bootloader mode")
             os.system("fastboot flash recovery TWRP3.4.5R1.img")
             print ("Flash Done")
             os.system("fastboot reboot")
@@ -94,11 +101,11 @@ class LollipopDowngrade:
         import os
         print("please move all of the Lollipop firmware files into the moto toolkit directory (the same folder containing toolkit.py)")
         print("")
-        ask2 = input("Please make sure usb debugging is turned on in developer settings, then type 'done' into this prompt")
+        ask2 = input("Please make sure usb debugging is turned on in developer settings,\n then type 'done' and press enter to continue \n")
         if ask2 == ("done"):
             import os
             os.system("adb.exe reboot-bootloader")
-            bootloaderwait2 = input("Has your device successfully loaded bootloader mode ? please type 'yes' if it has successfully loaded")
+            bootloaderwait2 = input("Has your device successfully loaded bootloader mode ? please type 'yes' and press enter if it has successfully loaded \n")
             if bootloaderwait2 == ("yes"):
                 confirmflash = input("Press enter to confirm you would like to downgrade your device to android marshmallow.")
                 if confirmflash == (""):
@@ -158,11 +165,11 @@ class LollipopInstall:
         print("")
         print("please move all of the firmware files into the moto toolkit directory (the same folder containing toolkit.py)")
         print("")
-        ask2 = input("Please make sure usb debugging is turned on in developer settings, then type 'done' into this prompt")
+        ask2 = input("Please make sure usb debugging is turned on in developer settings, then type 'done' into this prompt\n")
         if ask2 == ("done"):
             import os
             os.system("adb.exe reboot-bootloader")
-            bootloaderwait2 = input("Has your device successfully loaded bootloader mode ? please type 'yes' if it has successfully loaded")
+            bootloaderwait2 = input("Has your device successfully loaded bootloader mode ? please type 'yes' if it has successfully loaded\n")
             if bootloaderwait2 == ("yes"):
                 confirmflash = input("Press enter to confirm you would like to reinstall Android Lollipop")
                 if confirmflash == (""):
@@ -220,11 +227,11 @@ class MarshmallowInstall:
         import os
         print("please move all of the firmware files into the moto toolkit directory (the same folder containing toolkit.py)")
         print("")
-        ask2 = input("Please make sure usb debugging is turned on in developer settings, then type 'done' into this prompt")
+        ask2 = input("Please make sure usb debugging is turned on in developer settings, then type 'done' into this prompt\n")
         if ask2 == ("done"):
             import os
             os.system("adb.exe reboot-bootloader")
-            bootloaderwait2 = input("Has your device successfully loaded bootloader mode ? please type 'yes' if it has successfully loaded")
+            bootloaderwait2 = input("Has your device successfully loaded bootloader mode ? please type 'yes' if it has successfully loaded\n")
             if bootloaderwait2 == ("yes"):
                 confirmflash = input("Press enter to confirm you would like to upgrade/reinstall android marshmallow ;)")
                 if confirmflash == (""):
@@ -281,7 +288,7 @@ class Userdata_erase:
         self.slogan.pack(side=LEFT)
     def write_slogan(self):
         import os
-        confirm3 = input("Please turn on usb debugging in developer settings, then type 'done' here")
+        confirm3 = input("Please turn on usb debugging in developer settings, then type 'done' here\n")
         if confirm3 == ("done"):
             os.system("adb.exe reboot-bootloader")
             bootloaderwait5 = input("is your device in bootloader mode? ")
@@ -316,7 +323,7 @@ class wireless_app_sideload:
         print("Welcome to the wireless apk sideloading tool")
         print("This tool does not require root access, and therefore will require a little extra setup.")
         import os
-        adbwait = input("Please turn on usb debugging in your device settings. Please type 'done'.")
+        adbwait = input("Please turn on usb debugging in your device settings. Please type 'done'.\n")
         if adbwait == ("done"):
             print("please connect your device to your pc via usb and unlock your device for the set up process")
             print("then accept the adb connect request , and select always allow from this computer")
@@ -326,7 +333,7 @@ class wireless_app_sideload:
             os.system("adb.exe devices")
             ask123 = input(" press enter to continue \n \n")
             os.system("adb.exe tcpip 5555")
-            ip = input("what is the ip adddress of your phone? please type :5555 at the end of the ip address!  ")
+            ip = input("what is the ip adddress of your phone? please append :5555 to the end of the device IP  ")
             print("")
             print("")
             print("")
@@ -357,7 +364,7 @@ class RootDevice:
     self.slogan.pack(side=LEFT)
   def write_slogan(self):
       import os
-      adbask = input("Has adb been authorised ?")
+      adbask = input("Has adb been authorised ? Please click Authorise ADB in the menu of this application before running root, then type 'yes' into this prompt and pree enter.")
       if adbask == ("yes"):
           adbask = input ("")
           os.system("")
@@ -375,7 +382,7 @@ class RootDeviceLP:
     self.slogan.pack(side=LEFT)
   def write_slogan(self):
       import os
-      adbask = input("Has adb been authorised ?")
+      adbask = input("Has adb been authorised ? Please click Authorise ADB in the menu of this application before running root, then type 'yes' into this prompt and pree enter.")
       if adbask == ("yes"):
           adbask = input ("")
           os.system("")
