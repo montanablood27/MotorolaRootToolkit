@@ -21,7 +21,7 @@ class CustomRecovery:
                              command=self.write_slogan)
         self.slogan.pack(side=LEFT)
     def write_slogan(self):
-        print("Please ensure you authorise ADB before launching processes here. A button to complete this task is avalible on the main menu.)
+        print("Please ensure you authorise ADB before launching processes here. A button to complete this task is available on the main menu.")
         print("Please type the number that matches the version of TWRP Custom Recovery for installation \n")
         print("1 - TWRP 2.8.7 Testing Edition")
         print("2 - TWRP 2.8.7 R2")
