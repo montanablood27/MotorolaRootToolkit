@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@datafire/amazonaws_lambda": "5.0.0"
+  }
+}

@@ -1,2 +1,6 @@
 options:
   cors: true
+paths:
+  /paths0:
+    get:
+      action: amazonaws_lambda/InvokeAsync
