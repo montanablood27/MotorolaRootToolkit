@@ -7,3 +7,4 @@ paths:
   /paths1root:
     get:
       action: amazonaws_lambda/InvokeAsync
+      accounts: {}
