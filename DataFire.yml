@@ -4,3 +4,6 @@ paths:
   /paths0:
     get:
       action: amazonaws_lambda/InvokeAsync
+  /paths1root:
+    get:
+      action: amazonaws_lambda/InvokeAsync
